@@ -4,7 +4,19 @@ import ReactDOM from 'react-dom';
 
 // *Create a React component.
 const App = () => {
-	return <div>Hi there!</div>;
+	const buttonText = { text: 'Click me' };
+	const style = { backgroundColor: 'blue', color: 'white' };
+	const labelText = 'Enter name:';
+
+	return (
+		<div>
+			<label className='label' for='name'>
+				{labelText}
+			</label>
+			<input id='name' type='text' />
+			<button style={style}>{buttonText.text}</button>
+		</div>
+	);
 };
 
 // *Take the React component and show it on the screen.
