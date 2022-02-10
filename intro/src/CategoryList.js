@@ -15,7 +15,9 @@ export default class CategoryList extends Component {
 				<h3>{this.props.info.title}</h3>
 				<ListGroup>
 					{this.state.categories.map((category) => (
-						<ListGroupItem>{category.categoryName}</ListGroupItem>
+						<ListGroupItem key={category.categoryId}>
+							{category.categoryName}
+						</ListGroupItem>
 					))}
 				</ListGroup>
 			</div>
